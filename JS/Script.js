@@ -1,10 +1,10 @@
-const body = document.querySelector("body");
-hourHand = document.querySelector(".hour");
-minuteHand = document.querySelector(".minute");
-secondHand = document.querySelector(".second");
+const body = document.querySelector("body"),
+hourHand = document.querySelector(".hour"),
+minuteHand = document.querySelector(".minute"),
+secondHand = document.querySelector(".second"),
 modeSwitch = document.querySelector(".mode-switch");
 
-if (localStorage.getItem("mode") === "Dar Mode") {
+if (localStorage.getItem("mode") === "Dark Mode") {
     body.classList.add("dark");
     modeSwitch.textContent = "Light Mode";
 }
@@ -17,9 +17,9 @@ modeSwitch.addEventListener("click", () => {
 });
 
 const updateTime = () => {
-    let date = new date(),
-        secToDeg = (date.getSeconds() / 60) * 360
-    minToDeg = (date.getMinutes() / 60) * 360
+    let date = new Date(),
+        secToDeg = (date.getSeconds() / 60) * 360,
+    minToDeg = (date.getMinutes() / 60) * 360,
     hrToDeg = (date.getHours() / 12) * 360;
 
     secondHand.style.transform = `rotate(${secToDeg}deg)`;
@@ -27,6 +27,6 @@ const updateTime = () => {
     hourHand.style.transform = `rotate(${hrToDeg}deg)`;
 };
 
-setInterval(updateTime, 100);
+setInterval(updateTime, 1000);
 
 updateTime();

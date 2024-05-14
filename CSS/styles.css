@@ -55,10 +55,6 @@ body.dark {
     inset: 20px;
     text-align: center;
     transform: rotate(calc(var(--i) * (360deg / 12)));
-    -webkit-transform: rotate(calc(var(--i) * (360deg / 12)));
-    -moz-transform: rotate(calc(var(--i) * (360deg / 12)));
-    -ms-transform: rotate(calc(var(--i) * (360deg / 12)));
-    -o-transform: rotate(calc(var(--i) * (360deg / 12)));
 }
 
 .Clock label span {
@@ -66,6 +62,7 @@ body.dark {
     font-size: 30px;
     font-weight: 600;
     color: var(--black-color);
+    transform: rotate(calc(var(--i) * (360deg / 12)));
 }
 
 
@@ -129,8 +126,8 @@ body.dark {
     font-size: 22px;
     font-weight: 400;
     display: inline-block;
-    color: var(--black-color);
-    background: var(--white-color);
+    color: var(--white-color);
+    background: var(--black-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
