@@ -95,3 +95,45 @@ body.dark {
     background: var(--black-color);
     border: 4px solid var(--red-color);
 }
+
+.indicator .hand{
+    position: absolute;
+    height: 130px;
+    width: 4px;
+    bottom: 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transform-origin: bottom;
+    background: var(--red-color);
+}
+
+.hand.minute{
+    height: 120px;
+    width: 5px;
+    background: var(--black-color);
+}
+
+.hand.hour{
+    height: 100px;
+    width: 8px;
+    background: var(--black-color);
+}
+
+.mode-switch{
+    padding: 10px 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    font-size: 22px;
+    font-weight: 400;
+    display: inline-block;
+    color: var(--white-color);
+    background: var(--white-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
