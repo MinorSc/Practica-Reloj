@@ -12,6 +12,8 @@
     --red-color: #e74c3c;
 }
 
+
+
 body {
     display: flex;
     min-height: 100vh;
@@ -21,9 +23,9 @@ body {
 }
 
 body.dark {
-    -primary-color: #f6f7fb;
-    --white-color: #fff;
-    --black-color: #18191a;
+    --primary-color: #242526;
+    --white-color: #18191a;
+    --black-color: #fff;
     --red-color: #e74c3c;
 }
 
@@ -55,6 +57,10 @@ body.dark {
     inset: 20px;
     text-align: center;
     transform: rotate(calc(var(--i) * (360deg / 12)));
+    -webkit-transform: rotate(calc(var(--i) * (360deg / 12)));
+    -moz-transform: rotate(calc(var(--i) * (360deg / 12)));
+    -ms-transform: rotate(calc(var(--i) * (360deg / 12)));
+    -o-transform: rotate(calc(var(--i) * (360deg / 12)));
 }
 
 .Clock label span {
@@ -62,7 +68,11 @@ body.dark {
     font-size: 30px;
     font-weight: 600;
     color: var(--black-color);
-    transform: rotate(calc(var(--i) * (360deg / 12)));
+    transform: rotate(calc(var(--i) * (-360deg / 12)));
+    -webkit-transform: rotate(calc(var(--i) * (-360deg / 12)));
+    -moz-transform: rotate(calc(var(--i) * (-360deg / 12)));
+    -ms-transform: rotate(calc(var(--i) * (-360deg / 12)));
+    -o-transform: rotate(calc(var(--i) * (-360deg / 12)));
 }
 
 
